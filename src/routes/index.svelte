@@ -38,7 +38,6 @@
 	}
 	@media screen and (min-width: 640px) {
 		h1 {
-			color: red;
 			font-size: 4em;
 		}
 		.pos {
