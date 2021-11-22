@@ -1,9 +1,14 @@
+<script>
+	import RepoCard from "../components/RepoCard.svelte"
+</script>
+
 <main>
-	<div><h1>Robert Boyd</h1><span class="pos">noun</span></div>
+	<div class="head"><h1>Robert Boyd</h1><span class="pos">noun</span></div>
 	<p>
 		<span class="super">1</span> a curious student and software developer at the University of Central Florida passionate
 		about programming languages and the web
 	</p>
+	<RepoCard repo="rob-3/steel-lang"/>
 </main>
 
 <style>
@@ -19,7 +24,7 @@
 		padding: 0.25em;
 		display: inline-block;
 	}
-	div {
+	.head {
 		white-space: nowrap;
 		margin: 0.25em;
 	}

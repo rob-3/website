@@ -6,13 +6,15 @@
 			padding: 0;
 		}
 		body {
-			width: 100vw;
-			height: 100vh;
+			background-attachment: fixed;
 			background-image: url('/shutterstock_624908471.jpg');
 			background-size: cover;
 			background-position: center;
 		}
+		html {
+			overscroll-behavior-y: none;
+		}
 	</style>
 </svelte:head>
 
-<slot></slot>
+<slot />
