@@ -51,7 +51,7 @@
 				{/await}
 			</div>
 			{#if stargazers_count !== 0}
-				<div style="display: 'flex'; align-items: center; margin-right: 16px;">
+				<div style="display: flex; align-items: center; margin-right: 16px;">
 					<svg
 						style="fill: #586069;"
 						aria-label="stars"

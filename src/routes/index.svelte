@@ -2,21 +2,39 @@
 	import RepoCard from "../components/RepoCard.svelte"
 </script>
 
+<header class="head">
+	<h1>Robert Boyd</h1><span class="pos">noun</span>
+</header>
 <main>
-	<div class="head"><h1>Robert Boyd</h1><span class="pos">noun</span></div>
 	<p>
 		<span class="super">1</span> a curious student and software developer at the University of Central Florida passionate
 		about programming languages and the web
 	</p>
-	<RepoCard repo="rob-3/steel-lang"/>
+	<div class="card">
+		<RepoCard repo="rob-3/steel-lang" />
+	</div>
+	<div class="card">
+		<RepoCard repo="knighthacks/scythe"/>
+	</div>
+	<div class="card">
+		<RepoCard repo="knighthacks/lancelot"/>
+	</div>
+	<div class="card">
+		<RepoCard repo="knighthacks/hackathon-2021-frontend"/>
+	</div>
+	<div class="card">
+		<RepoCard repo="knighthacks/club-site-2021"/>
+	</div>
 </main>
 
 <style>
+	.card {
+		width: 20em;
+		margin: 2em;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
 	* {
 		font-family: Roboto;
-	}
-	main {
-		overflow: hidden;
 	}
 	h1 {
 		font-weight: 100;
