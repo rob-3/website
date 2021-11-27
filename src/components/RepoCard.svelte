@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { githubColors } from '../stores/stores';
+	import { browser } from '$app/env';
 	export let repo: string | null;
-	$: dataPromise = fetch(`https://api.github.com/repos/${repo}`).then((b) => b.json());
+	$: dataPromise = browser && fetch(`https://api.github.com/repos/${repo}`).then((b) => b.json());
 </script>
 
 {#await dataPromise}
