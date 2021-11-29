@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { githubColors } from '../stores/stores';
 	export let repo: string;
+	console.log("hello");
 	$: dataPromise = fetch(`https://api.github.com/repos/${repo}`).then((b) => {
-		console.log("hello");
 		return b.ok ? b.json() : Promise.reject('Request to github failed!');
 	});
 </script>
