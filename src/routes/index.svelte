@@ -1,30 +1,28 @@
 <script>
-	import RepoCard from "../components/RepoCard.svelte"
+	import RepoCard from '../components/RepoCard.svelte';
+	const repos = [
+		'rob-3/steel-lang',
+		'knighthacks/scythe',
+		'knighthacks/lancelot',
+		'knighthacks/hackathon-2021-frontend',
+		'knighthacks/club-site-2021'
+	];
 </script>
 
 <header class="head">
-	<h1>Robert Boyd</h1><span class="pos">noun</span>
+	<h1>Robert Boyd</h1>
+	<span class="pos">noun</span>
 </header>
 <main>
 	<p>
-		<span class="super">1</span> a curious student and software developer at the University of Central Florida passionate
-		about programming languages and the web
+		<span class="super">1</span> a curious student and software developer at the University of Central
+		Florida passionate about programming languages and the web
 	</p>
-	<div class="card">
-		<RepoCard repo="rob-3/steel-lang" />
-	</div>
-	<div class="card">
-		<RepoCard repo="knighthacks/scythe"/>
-	</div>
-	<div class="card">
-		<RepoCard repo="knighthacks/lancelot"/>
-	</div>
-	<div class="card">
-		<RepoCard repo="knighthacks/hackathon-2021-frontend"/>
-	</div>
-	<div class="card">
-		<RepoCard repo="knighthacks/club-site-2021"/>
-	</div>
+	{#each repos as repo (repo)}
+		<div class="card">
+			<RepoCard {repo} />
+		</div>
+	{/each}
 </main>
 
 <style>

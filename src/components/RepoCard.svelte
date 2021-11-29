@@ -1,15 +1,14 @@
 <script lang="ts">
 	import { githubColors } from '../stores/stores';
+	import { fade } from 'svelte/transition';
 	export let repo: string;
 	$: dataPromise = fetch(`https://api.github.com/repos/${repo}`).then((b) => {
 		return b.ok ? b.json() : Promise.reject('Request to github failed!');
 	});
 </script>
 
-<div class="card">
-	{#await dataPromise}
-		<p>loading...</p>
-	{:then { fork, forks, html_url, name, source, description, language, stargazers_count }}
+{#await dataPromise then { fork, forks, html_url, name, source, description, language, stargazers_count }}
+	<div transition:fade class="card">
 		<div class="center">
 			<svg
 				style="fill: #586069; margin-right: 8px;"
@@ -34,16 +33,12 @@
 				>
 			</div>
 		{/if}
-		{#if description}
-			<div style="font-size: 12px; margin-bottom: 16px; margin-top: 8px; color: #586069;">
-				{description}
-			</div>
-		{/if}
+		<div style="font-size: 12px; margin-bottom: 16px; margin-top: 8px; color: #586069;">
+			{description || 'No description, website, or topics provided.'}
+		</div>
 		<div style="font-size: 12px; color: #586069; display: flex;">
 			<div style="{language ? '' : 'display: none'}; margin-right: 16px;">
-				{#await $githubColors}
-					<p>waiting...</p>
-				{:then colors}
+				{#await $githubColors then colors}
 					<span
 						style="width: 12px; height: 12px; border-radius: 100%; background-color: {language
 							? colors[language].color
@@ -89,10 +84,10 @@
 				</div>
 			{/if}
 		</div>
-	{:catch err}
-		<div>{err}</div>
-	{/await}
-</div>
+	</div>
+{:catch err}
+	<div transition:fade class="card">{err}</div>
+{/await}
 
 <style>
 	.card {
@@ -105,6 +100,8 @@
 		font-size: 14px;
 		line-height: 1.5;
 		color: #24292e;
+		min-height: 115px;
+		box-sizing: border-box;
 	}
 	.center {
 		display: flex;
