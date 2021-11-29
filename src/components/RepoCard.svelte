@@ -1,12 +1,10 @@
 <script lang="ts">
-	import { browser } from '$app/env';
 	import { githubColors } from '../stores/stores';
 	export let repo: string;
-	$: dataPromise =
-		browser &&
-		fetch(`https://api.github.com/repos/${repo}`).then((b) =>
-			b.ok ? b.json() : Promise.reject('Request to github failed!')
-		);
+	$: dataPromise = fetch(`https://api.github.com/repos/${repo}`).then((b) => {
+		console.log("hello");
+		return b.ok ? b.json() : Promise.reject('Request to github failed!');
+	});
 </script>
 
 <div class="card">
