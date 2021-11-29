@@ -1,14 +1,18 @@
 <script lang="ts">
-	import { githubColors } from '../stores/stores';
 	import { browser } from '$app/env';
-	export let repo: string | null;
-	$: dataPromise = browser && fetch(`https://api.github.com/repos/${repo}`).then((b) => b.json());
+	import { githubColors } from '../stores/stores';
+	export let repo: string;
+	$: dataPromise =
+		browser &&
+		fetch(`https://api.github.com/repos/${repo}`).then((b) =>
+			b.ok ? b.json() : Promise.reject('Request to github failed!')
+		);
 </script>
 
-{#await dataPromise}
-	<p>loading...</p>
-{:then { fork, forks, html_url, name, source, description, language, stargazers_count }}
-	<div class="card">
+<div class="card">
+	{#await dataPromise}
+		<p>loading...</p>
+	{:then { fork, forks, html_url, name, source, description, language, stargazers_count }}
 		<div class="center">
 			<svg
 				style="fill: #586069; margin-right: 8px;"
@@ -27,7 +31,7 @@
 			</span>
 		</div>
 		{#if fork}
-			<div style="display: 'block'; font-size: 12px; color: #586069;">
+			<div class="fork">
 				Forked from <a style="color: inherit; text-decoration: none;" href={source.html_url}
 					>{source.full_name}</a
 				>
@@ -88,8 +92,10 @@
 				</div>
 			{/if}
 		</div>
-	</div>
-{/await}
+	{:catch err}
+		<div>{err}</div>
+	{/await}
+</div>
 
 <style>
 	.card {
@@ -106,5 +112,9 @@
 	.center {
 		display: flex;
 		align-items: center;
+	}
+	.fork {
+		font-size: 12px;
+		color: #586069;
 	}
 </style>
