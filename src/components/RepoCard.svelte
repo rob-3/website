@@ -33,7 +33,7 @@
 				>
 			</div>
 		{/if}
-		<div style="font-size: 12px; margin-bottom: 16px; margin-top: 8px; color: #586069;">
+		<div class="description" style="font-size: 12px; margin-bottom: 16px; margin-top: 8px; color: #586069;">
 			{description || 'No description, website, or topics provided.'}
 		</div>
 		<div style="font-size: 12px; color: #586069; display: flex;">
@@ -94,21 +94,27 @@
 		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
 			Apple Color Emoji, Segoe UI Emoji;
 		border: 1px solid #e1e4e8;
-		border-radius: 6px;
+		border-radius: 0.375em;
 		background: white;
-		padding: 16px;
-		font-size: 14px;
+		padding: 1.2em;
 		line-height: 1.5;
 		color: #24292e;
-		min-height: 115px;
+		min-height: 8.2em;
+		height: 100%;
 		box-sizing: border-box;
+		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
+		display: flex;
+		flex-direction: column;
 	}
 	.center {
 		display: flex;
 		align-items: center;
 	}
 	.fork {
-		font-size: 12px;
+		font-size: 0.75em;
 		color: #586069;
+	}
+	.description {
+		flex-grow: 1;
 	}
 </style>

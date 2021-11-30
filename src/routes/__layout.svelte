@@ -12,7 +12,7 @@
 			background-position: center;
 		}
 		html {
-			overscroll-behavior-y: none;
+			overscroll-behavior: none;
 		}
 	</style>
 </svelte:head>
