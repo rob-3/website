@@ -18,6 +18,8 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
+			width: 100vw;
+			width: 100vh;
 		}
 		.all {
 			position: absolute;
