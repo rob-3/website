@@ -23,7 +23,8 @@
 			box-sizing: border-box;
 		}
 		.all {
-			position: absolute;
+			position: relative;
+			box-sizing: border-box;
 			width: 100%;
 			height: 100%;
 		}
