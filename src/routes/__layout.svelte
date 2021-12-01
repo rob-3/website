@@ -12,7 +12,7 @@
 			background-position: center;
 			width: 100vw;
 			height: 100vh;
-			overflow: overlay;
+			overflow: scroll;
 		}
 		html {
 			overscroll-behavior: none;
