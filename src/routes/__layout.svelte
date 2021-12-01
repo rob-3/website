@@ -6,6 +6,7 @@
 			padding: 0;
 		}
 		body {
+			background-attachment: scroll;
 			background-image: url('/shutterstock_624908471.jpg');
 			background-size: cover;
 			background-position: center;
