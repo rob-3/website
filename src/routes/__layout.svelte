@@ -5,6 +5,8 @@
 			margin: 0;
 			padding: 0;
 		}
+		/* this is all a massive hack to get around background-attachment: fixed
+		 * not working well on mobile*/
 		.all::before {
 			content: '';
 			position: fixed;
@@ -19,7 +21,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			width: 100vw;
-			width: 100vh;
+			height: 100vh;
 		}
 		.all {
 			position: absolute;
