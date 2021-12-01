@@ -5,11 +5,13 @@
 			margin: 0;
 			padding: 0;
 		}
-		body {
-			background-attachment: scroll;
+		.everything {
+			background-attachment: fixed;
 			background-image: url('/shutterstock_624908471.jpg');
 			background-size: cover;
 			background-position: center;
+			width: 100vw;
+			height: 100vh;
 		}
 		html {
 			overscroll-behavior: none;
@@ -18,4 +20,6 @@
 	</style>
 </svelte:head>
 
-<slot />
+<div class="everything">
+	<slot />
+</div>
