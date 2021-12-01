@@ -10,9 +10,9 @@
 			background-image: url('/shutterstock_624908471.jpg');
 			background-size: cover;
 			background-position: center;
-			width: 100%;
-			height: 100%;
-			overflow: scroll;
+			width: 100vw;
+			height: 100vh;
+			overflow: overlay;
 		}
 		html {
 			overscroll-behavior: none;
