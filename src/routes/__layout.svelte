@@ -13,7 +13,7 @@
 		}
 		html {
 			overscroll-behavior: none;
-			height: -webkit-fill-available;
+			min-height: 100%;
 		}
 	</style>
 </svelte:head>
