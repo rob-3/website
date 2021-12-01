@@ -2,9 +2,9 @@
 	import { githubColors } from '../stores/stores';
 	import { fade } from 'svelte/transition';
 	export let repo: string;
-	$: dataPromise = fetch(`https://api.github.com/repos/${repo}`).then((b) => {
-		return b.ok ? b.json() : Promise.reject('Request to github failed!');
-	});
+	$: dataPromise = fetch(`/github-api/${repo}`)
+		.then((rsp) => rsp.json())
+		.then((data) => (data.name ? data : Promise.reject('Request failed!')));
 </script>
 
 {#await dataPromise then { fork, forks, html_url, name, source, description, language, stargazers_count }}
@@ -33,7 +33,10 @@
 				>
 			</div>
 		{/if}
-		<div class="description" style="font-size: 12px; margin-bottom: 16px; margin-top: 8px; color: #586069;">
+		<div
+			class="description"
+			style="font-size: 12px; margin-bottom: 16px; margin-top: 8px; color: #586069;"
+		>
 			{description || 'No description, website, or topics provided.'}
 		</div>
 		<div style="font-size: 12px; color: #586069; display: flex;">
