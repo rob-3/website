@@ -7,8 +7,7 @@
 		}
 		/* this is all a massive hack to get around background-attachment: fixed
 		 * not working well on mobile*/
-		.all::before {
-			content: '';
+		.bg {
 			position: fixed;
 			z-index: -1;
 			display: block;
@@ -21,7 +20,6 @@
 			width: 100%;
 			height: 100%;
 			box-sizing: border-box;
-			background-size: 180%;
 		}
 		.all {
 			position: relative;
@@ -35,6 +33,7 @@
 	</style>
 </svelte:head>
 
+<div class="bg"></div>
 <div class="all">
 	<slot />
 </div>
