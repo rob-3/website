@@ -20,24 +20,31 @@
 			a curious student and software developer at the University of Central Florida passionate about
 			programming languages and the web
 		</p>
-		<section class="center">
-			<h2>My Projects</h2>
-			<div class="cards">
-				{#each repos as repo (repo)}
-					<div class="card">
-						<RepoCard {repo} />
-					</div>
-				{/each}
-			</div>
-		</section>
-		<section class="center">
-			<h2>Most Recent Talk</h2>
-			<YouTubeVideo src={talks[0]}/>
-		</section>
+		<div class="flex-horizontal">
+			<section class="center">
+				<h2>My Projects</h2>
+				<div class="cards">
+					{#each repos as repo (repo)}
+						<div class="card">
+							<RepoCard {repo} />
+						</div>
+					{/each}
+				</div>
+			</section>
+			<section class="center">
+				<h2>Most Recent Talk</h2>
+				<YouTubeVideo src={talks[0]}/>
+			</section>
+		</div>
 	</main>
 </div>
 
 <style>
+	.flex-horizontal {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 	h2 {
 		font-weight: 300;
 		font-size: 2em;
