@@ -1,0 +1,19 @@
+export default [
+	'https://www.youtube-nocookie.com/embed/cPLErKHGtpQ',
+	'https://www.youtube-nocookie.com/embed/GBRm-D-AMxA',
+	'https://www.youtube-nocookie.com/embed/6Bqf_FLqYb8',
+	'https://www.youtube-nocookie.com/embed/-iYu8kC3rOk',
+	'https://www.youtube-nocookie.com/embed/-dyalS9_s3o',
+	'https://www.youtube-nocookie.com/embed/LvVBj34F6po',
+	'https://www.youtube-nocookie.com/embed/d8O_XSC_XjY',
+	'https://www.youtube-nocookie.com/embed/pTpATrMsl2c',
+	'https://www.youtube-nocookie.com/embed/zlNgsWwWzyQ',
+	'https://www.youtube-nocookie.com/embed/ubYTlZh3Ry0',
+	'https://www.youtube-nocookie.com/embed/EzhLcpd0fNY',
+	'https://www.youtube-nocookie.com/embed/S0QEEZ5VdF0',
+	'https://www.youtube-nocookie.com/embed/EXhgeNg8Ezk',
+	'https://www.youtube-nocookie.com/embed/rhnITQ7AM88',
+	'https://www.youtube-nocookie.com/embed/ix3Q6XevlA0',
+	'https://www.youtube-nocookie.com/embed/A2D1Cg-ZrpU',
+	'https://www.youtube-nocookie.com/embed/z1yfZrlYRUU'
+];

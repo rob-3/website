@@ -30,10 +30,36 @@
 		html {
 			overscroll-behavior: none;
 		}
+		* {
+			font-family: Roboto;
+		}
+		h1 {
+			font-weight: 100;
+			font-size: 3em;
+			padding: 0.25em;
+			display: inline-block;
+		}
+		header {
+			white-space: nowrap;
+			margin: 0.25em;
+		}
+		main {
+			width: min(1300px, 100%);
+		}
+		p {
+			padding: 0.5em;
+			margin: 0 1em;
+			text-align: center;
+		}
+		@media screen and (min-width: 640px) {
+			h1 {
+				font-size: 4em;
+			}
+		}
 	</style>
 </svelte:head>
 
-<div class="bg"></div>
+<div class="bg" />
 <div class="all">
 	<slot />
 </div>
