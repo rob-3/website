@@ -2,13 +2,7 @@
 	import RepoCard from '../components/RepoCard.svelte';
 	import YouTubeVideo from '../components/YouTubeVideo.svelte';
 	import talks from './_talks';
-	const repos = [
-		'rob-3/steel-lang',
-		'knighthacks/scythe',
-		'knighthacks/lancelot',
-		'knighthacks/hackathon-2021-frontend',
-		'knighthacks/club-site-2021'
-	];
+	import repos from './_repos';
 </script>
 
 <div class="all">
