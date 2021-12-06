@@ -23,7 +23,7 @@
 				/></svg
 			>
 			<span style="font-weight: 600; color: #0366d6;">
-				<a style="text-decoration: none; color: inherit;" href={html_url}>{name}</a>
+				<a style="color: inherit;" href={html_url}>{name}</a>
 			</span>
 		</div>
 		{#if fork}
