@@ -51,6 +51,13 @@
 			margin: 0 1em;
 			text-align: center;
 		}
+		a, a:visited {
+			color: inherit;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
 		@media screen and (min-width: 640px) {
 			h1 {
 				font-size: 4em;

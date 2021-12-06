@@ -16,7 +16,7 @@
 		</p>
 		<div class="flex-horizontal">
 			<section class="center">
-				<h2>My Projects</h2>
+				<h2><a href="/projects">My Projects</a></h2>
 				<div class="cards">
 					{#each repos as repo (repo)}
 						<div class="card">
@@ -26,7 +26,7 @@
 				</div>
 			</section>
 			<section class="center">
-				<h2>Most Recent Talk</h2>
+				<h2><a href="/talks">Most Recent Talk</a></h2>
 				<YouTubeVideo src={talks[0]}/>
 			</section>
 		</div>
