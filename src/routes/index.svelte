@@ -1,37 +1,29 @@
 <script>
-	import RepoCard from '../components/RepoCard.svelte';
+	import GitHubPortfolio from '../components/GitHubPortfolio.svelte';
 	import YouTubeVideo from '../components/YouTubeVideo.svelte';
 	import talks from './_talks';
 	import repos from './_repos';
 </script>
 
-<div class="all">
-	<header>
-		<h1>Robert Boyd</h1>
-	</header>
-	<main>
-		<p>
-			a curious student and software developer at the University of Central Florida passionate about
-			programming languages and the web
-		</p>
-		<div class="flex-horizontal">
-			<section class="center">
-				<h2><a href="/projects">My Projects</a></h2>
-				<div class="cards">
-					{#each repos as repo (repo)}
-						<div class="card">
-							<RepoCard {repo} />
-						</div>
-					{/each}
-				</div>
-			</section>
-			<section class="center">
-				<h2><a href="/talks">Most Recent Talk</a></h2>
-				<YouTubeVideo src={talks[0]}/>
-			</section>
-		</div>
-	</main>
-</div>
+<header>
+	<h1>Robert Boyd</h1>
+</header>
+<main>
+	<p>
+		a curious student and software developer at the University of Central Florida passionate about
+		programming languages and the web
+	</p>
+	<div class="flex-horizontal">
+		<section class="center">
+			<h2><a href="/projects">My Projects</a></h2>
+			<GitHubPortfolio {repos}/>
+		</section>
+		<section class="center">
+			<h2><a href="/talks">Most Recent Talk</a></h2>
+			<YouTubeVideo src={talks[0]} />
+		</section>
+	</div>
+</main>
 
 <style>
 	.flex-horizontal {
@@ -39,29 +31,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	h2 {
-		font-weight: 300;
-		font-size: 2em;
-		margin-top: 1em;
-	}
 	.center {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.card {
-		width: 20em;
-		margin: 1.5em;
-		font-size: 0.875em;
-	}
-	.cards {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: 1.5em;
-		font-size: 1rem;
-	}
-	.all {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
