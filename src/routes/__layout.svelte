@@ -26,11 +26,11 @@
 			box-sizing: border-box;
 			width: 100%;
 			height: 100%;
+			display: flex;
+			justify-content: center;
 		}
 		.all-center {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			margin: auto;
 			width: min(2600px, 100%);
 		}
 		html {
@@ -48,6 +48,7 @@
 		header {
 			white-space: nowrap;
 			margin: 0.25em;
+			text-align: center;
 		}
 		p {
 			padding: 0.5em;
@@ -83,6 +84,9 @@
 <div class="bg" />
 <div class="all">
 	<div class="all-center">
+		<div>
+
 		<slot />
+		</div>
 	</div>
 </div>

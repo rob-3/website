@@ -1,9 +1,8 @@
-<script>
+<script lang="ts">
 	import GitHubPortfolio from '../components/GitHubPortfolio.svelte';
 	import YouTubeVideo from '../components/YouTubeVideo.svelte';
 	import talks from './_talks';
-	import repoData from './_repos';
-	const repos = repoData.map((data) => data.repo);
+	import repos from './_repos';
 </script>
 
 <header>
@@ -29,8 +28,8 @@
 <style>
 	.projects {
 		flex-basis: 45em;
+		width: min(70em, 100%);
 		flex-grow: 1;
-		max-width: 70em;
 	}
 	.talks {
 		flex-basis: 650px;
@@ -38,7 +37,7 @@
 	}
 	.flex-horizontal {
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		justify-content: center;
 	}
 	.center {
