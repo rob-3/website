@@ -60,7 +60,9 @@
 			text-align: center;
 		}
 		h1 a,
-		h1 a:visited {
+		h1 a:visited,
+		h2 a,
+		h2 a:visited {
 			color: inherit;
 			text-decoration: none;
 		}
