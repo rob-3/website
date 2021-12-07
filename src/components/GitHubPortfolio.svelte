@@ -21,7 +21,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin: 1.5em;
 		font-size: 1rem;
 	}
 </style>

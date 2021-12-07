@@ -3,7 +3,7 @@
 	import YouTubeVideo from '../components/YouTubeVideo.svelte';
 	import talks from './_talks';
 	import repoData from './_repos';
-	const repos = repoData.map(data => data.repo)
+	const repos = repoData.map((data) => data.repo);
 </script>
 
 <header>
@@ -15,11 +15,11 @@
 		programming languages and the web
 	</p>
 	<div class="flex-horizontal">
-		<section class="center">
+		<section class="center projects">
 			<h2><a href="/projects">My Projects</a></h2>
-			<GitHubPortfolio {repos}/>
+			<GitHubPortfolio {repos} />
 		</section>
-		<section class="center">
+		<section class="center talks">
 			<h2><a href="/talks">Most Recent Talk</a></h2>
 			<YouTubeVideo src={talks[0]} />
 		</section>
@@ -27,6 +27,15 @@
 </main>
 
 <style>
+	.projects {
+		flex-basis: 45em;
+		flex-grow: 1;
+		max-width: 70em;
+	}
+	.talks {
+		flex-basis: 650px;
+		flex-grow: 1;
+	}
 	.flex-horizontal {
 		display: flex;
 		flex-wrap: wrap;

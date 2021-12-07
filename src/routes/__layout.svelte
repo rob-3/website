@@ -49,7 +49,7 @@
 			margin: 0.25em;
 		}
 		main {
-			width: min(1300px, 100%);
+			width: min(2600px, 100%);
 			display: flex;
 			flex-direction: column;
 			align-items: center;

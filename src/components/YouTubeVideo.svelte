@@ -3,7 +3,6 @@
 </script>
 
 <iframe
-	width="560"
 	height="315"
 	{src}
 	title="YouTube video player"
@@ -15,5 +14,6 @@
 <style>
 	iframe {
 		margin: 2em;
+		width: min(560px, 100%);
 	}
 </style>
