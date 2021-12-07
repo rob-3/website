@@ -29,8 +29,8 @@
 
 <style>
 	.projects {
-		flex-basis: 45em;
-		width: min(70em, 100%);
+		flex-basis: 55em;
+		max-width: min(70em, 100%);
 		flex-grow: 1;
 	}
 	.talks {
@@ -39,7 +39,7 @@
 	}
 	.flex-horizontal {
 		display: flex;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		justify-content: center;
 	}
 	.center {
