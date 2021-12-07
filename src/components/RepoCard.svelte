@@ -110,7 +110,6 @@
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
 		display: flex;
 		flex-direction: column;
-		cursor: pointer;
 	}
 	.center {
 		display: flex;

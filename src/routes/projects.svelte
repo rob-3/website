@@ -36,6 +36,7 @@
 		width: 20em;
 		margin: 1.5em;
 		font-size: 0.875em;
+		cursor: pointer;
 	}
 	.cards {
 		display: flex;
