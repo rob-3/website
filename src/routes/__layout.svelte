@@ -31,6 +31,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			width: min(2600px, 100%);
 		}
 		html {
 			overscroll-behavior: none;
@@ -47,12 +48,6 @@
 		header {
 			white-space: nowrap;
 			margin: 0.25em;
-		}
-		main {
-			width: min(2600px, 100%);
-			display: flex;
-			flex-direction: column;
-			align-items: center;
 		}
 		p {
 			padding: 0.5em;
