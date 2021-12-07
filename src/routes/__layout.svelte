@@ -32,9 +32,17 @@
 		.all-center {
 			margin: auto;
 			width: min(2600px, 100%);
+			height: 100%;
+		}
+		#svelte {
+			height: 100%;
 		}
 		html {
 			overscroll-behavior: none;
+			height: 100%;
+		}
+		body {
+			height: 100%;
 		}
 		* {
 			font-family: Roboto;
