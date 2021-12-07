@@ -22,6 +22,7 @@
 		<section class="center talks">
 			<h2><a href="/talks">My Talks</a></h2>
 			<YouTubeVideo src={talks[0]} />
+			<a href="/talks">All Talks</a>
 		</section>
 	</div>
 </main>
