@@ -3,6 +3,7 @@
 	import YouTubeVideo from '../components/YouTubeVideo.svelte';
 	import talks from './_talks';
 	import repos from './_repos';
+	import links from './_links'
 </script>
 
 <header>
@@ -15,11 +16,11 @@
 	</p>
 	<div class="flex-horizontal">
 		<section class="center projects">
-			<h2><a href="/projects">My Projects</a></h2>
+			<h2><a href={links.github}>My Projects</a></h2>
 			<GitHubPortfolio {repos} />
 		</section>
 		<section class="center talks">
-			<h2><a href="/talks">Most Recent Talk</a></h2>
+			<h2><a href="/talks">My Talks</a></h2>
 			<YouTubeVideo src={talks[0]} />
 		</section>
 	</div>
