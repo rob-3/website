@@ -7,8 +7,10 @@
 		.then((data) => (data.name ? data : Promise.reject('Request failed!')));
 </script>
 
-{#await dataPromise then { fork, forks, html_url, name, source, description, language, stargazers_count }}
-	<div transition:fade class="card">
+{#await dataPromise}
+	<div class="card hidden" />
+{:then { fork, forks, html_url, name, source, description, language, stargazers_count }}
+	<div on:click in:fade class="card">
 		<div class="center">
 			<svg
 				style="fill: #586069; margin-right: 8px;"
@@ -89,7 +91,7 @@
 		</div>
 	</div>
 {:catch err}
-	<div transition:fade class="card">{err}</div>
+	<div in:fade class="card">{err}</div>
 {/await}
 
 <style>
@@ -108,6 +110,7 @@
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
 		display: flex;
 		flex-direction: column;
+		cursor: pointer;
 	}
 	.center {
 		display: flex;
@@ -119,5 +122,11 @@
 	}
 	.description {
 		flex-grow: 1;
+	}
+	.hidden {
+		visibility: hidden;
+	}
+	a {
+		text-decoration: none;
 	}
 </style>

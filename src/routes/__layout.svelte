@@ -50,16 +50,22 @@
 		}
 		main {
 			width: min(1300px, 100%);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 		p {
 			padding: 0.5em;
 			margin: 0 1em;
 			text-align: center;
 		}
-		a,
-		a:visited {
+		h1 a,
+		h1 a:visited {
 			color: inherit;
 			text-decoration: none;
+		}
+		a {
+
 		}
 		a:hover {
 			text-decoration: underline;

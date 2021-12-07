@@ -2,7 +2,8 @@
 	import GitHubPortfolio from '../components/GitHubPortfolio.svelte';
 	import YouTubeVideo from '../components/YouTubeVideo.svelte';
 	import talks from './_talks';
-	import repos from './_repos';
+	import repoData from './_repos';
+	const repos = repoData.map(data => data.repo)
 </script>
 
 <header>
