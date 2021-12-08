@@ -112,17 +112,16 @@
 		min-height: 100vh;
 	}
 	footer {
-		margin-top: auto;
+		margin: auto auto 0 auto;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: center;
-		width: 100%;
+		justify-content: space-between;
+		width: min(100%, 30em);
 		padding: 2em;
 		box-sizing: border-box;
 	}
 	footer > * {
-		padding: 0 50px;
 		color: black;
 	}
 </style>
