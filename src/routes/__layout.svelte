@@ -1,53 +1,13 @@
 <script lang="ts">
-	import links from './_links'
+	import links from './_links';
 </script>
+
 <svelte:head>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 		* {
 			margin: 0;
 			padding: 0;
-		}
-		/* this is all a massive hack to get around background-attachment: fixed
-		 * not working well on mobile*/
-		.bg {
-			position: fixed;
-			z-index: -1;
-			display: block;
-			top: 0px;
-			left: 0px;
-			background-image: url('/shutterstock_624908471.jpg');
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			width: 100%;
-			height: 100%;
-			box-sizing: border-box;
-		}
-		.all {
-			position: relative;
-			box-sizing: border-box;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-		}
-		.all-center {
-			margin: auto;
-			width: min(2600px, 100%);
-			height: 100%;
-		}
-		#svelte {
-			height: 100%;
-		}
-		html {
-			overscroll-behavior: none;
-			height: 100%;
-		}
-		body {
-			height: 100%;
-		}
-		* {
 			font-family: Roboto;
 		}
 		h1 {
@@ -73,8 +33,6 @@
 			color: inherit;
 			text-decoration: none;
 		}
-		a {
-		}
 		a:hover {
 			text-decoration: underline;
 		}
@@ -83,26 +41,15 @@
 			font-size: 2em;
 			margin-top: 1em;
 		}
-		.final {
-			display: flex;
-			flex-direction: column;
-			min-height: 100vh;
+		#svelte {
+			height: 100%;
 		}
-		footer {
-			margin-top: auto;
+		html {
+			overscroll-behavior: none;
+			height: 100%;
 		}
-		footer {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			width: 100%;
-			padding: 2em;
-			box-sizing: border-box;
-		}
-		footer > * {
-			padding: 0 50px;
-			color: black;
+		body {
+			height: 100%;
 		}
 		@media screen and (min-width: 640px) {
 			h1 {
@@ -129,5 +76,53 @@
 <style>
 	.home {
 		font-size: 2.5em;
+	}
+	/* this is all a massive hack to get around background-attachment: fixed
+		 * not working well on mobile*/
+	.bg {
+		position: fixed;
+		z-index: -1;
+		display: block;
+		top: 0px;
+		left: 0px;
+		background-image: url('/shutterstock_624908471.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+	}
+	.all {
+		position: relative;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.all-center {
+		margin: auto;
+		width: min(2600px, 100%);
+		height: 100%;
+	}
+	.final {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+	footer {
+		margin-top: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 2em;
+		box-sizing: border-box;
+	}
+	footer > * {
+		padding: 0 50px;
+		color: black;
 	}
 </style>
