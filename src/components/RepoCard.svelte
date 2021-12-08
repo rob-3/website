@@ -39,7 +39,7 @@
 		{/if}
 		<div
 			class="description"
-			style="font-size: 12px; margin-bottom: 16px; margin-top: 8px; color: #586069;"
+			style="font-size: 12px; margin-bottom: 8px; margin-top: 8px; color: #586069;"
 		>
 			{description || 'No description, website, or topics provided.'}
 		</div>
