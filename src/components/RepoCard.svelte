@@ -1,13 +1,15 @@
 <script lang="ts">
-	import { githubColors } from '../stores/stores';
+	import { githubColors, githubRequests } from '../stores/stores';
 	import { fade } from 'svelte/transition';
 	export let repo: string;
-	$: dataPromise = fetch(`/github-api/${repo}`)
+	if ($githubRequests[repo] === undefined) {
+		$githubRequests[repo] = fetch(`/github-api/${repo}`)
 		.then((rsp) => rsp.json())
-		.then((data) => (data.name ? data : Promise.reject('Request failed!')));
+		.then((data) => (data.name ? data : Promise.reject('Request failed!')))
+	}
 </script>
 
-{#await dataPromise}
+{#await $githubRequests[repo]}
 	<div class="card hidden" />
 {:then { fork, forks, html_url, name, source, description, language, stargazers_count }}
 	<div on:click in:fade class="card">

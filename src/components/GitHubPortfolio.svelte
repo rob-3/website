@@ -3,10 +3,11 @@
 	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';
 	type Repo = {
-		repo: string,
-		description: string,
-	}
-	export let repos: Repo[] = []; let myRepos = repos;
+		repo: string;
+		description: string;
+	};
+	export let repos: Repo[] = [];
+	let myRepos = repos;
 	let triggered = false;
 	function onClick(repoSlug: string) {
 		if (!triggered) {
