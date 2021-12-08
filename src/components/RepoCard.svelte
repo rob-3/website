@@ -27,7 +27,7 @@
 				/></svg
 			>
 			<span style="font-weight: 600; color: #0366d6;">
-				<a style="color: inherit;" href={html_url}>{name}</a>
+				<a on:click|stopPropagation={() => {}} style="color: inherit;" href={html_url}>{name}</a>
 			</span>
 		</div>
 		{#if fork}
