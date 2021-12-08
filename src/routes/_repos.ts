@@ -23,5 +23,9 @@ export default [
 		repo: 'knighthacks/club-site-2021',
 		description:
 			'This site is the Knight Hacks student organization club site. It is built with React and Gatsby, and lives at <a href="https://knighthacks.org">https://knighthacks.org</a>.'
+	},
+	{
+		repo: 'rob-3/website',
+		description: 'The source code for this website!'
 	}
 ];
