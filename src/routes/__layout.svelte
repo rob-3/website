@@ -85,13 +85,23 @@
 		display: block;
 		top: 0px;
 		left: 0px;
-		background-image: url('/shutterstock_624908471.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
 		width: 100%;
 		height: 100%;
 		box-sizing: border-box;
+		background-image: url('/shutterstock_624908471_med.jpg');
+	}
+	@media screen and (min-width: 1024px) {
+		.bg {
+			background-image: url('/shutterstock_624908471_lg.jpg');
+		}
+	}
+	@media screen and (min-width: 2160px) {
+		.bg {
+			background-image: url('/shutterstock_624908471_xl.jpg');
+		}
 	}
 	.all {
 		position: relative;
