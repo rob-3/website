@@ -36,8 +36,6 @@
 
 <style>
 	footer {
-		position: absolute;
-		bottom: 0;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
