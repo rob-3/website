@@ -1,3 +1,6 @@
+<script lang="ts">
+	import links from './_links'
+</script>
 <svelte:head>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
@@ -71,7 +74,6 @@
 			text-decoration: none;
 		}
 		a {
-
 		}
 		a:hover {
 			text-decoration: underline;
@@ -89,6 +91,19 @@
 		footer {
 			margin-top: auto;
 		}
+		footer {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			padding: 2em;
+			box-sizing: border-box;
+		}
+		footer > * {
+			padding: 0 50px;
+			color: black;
+		}
 		@media screen and (min-width: 640px) {
 			h1 {
 				font-size: 4em;
@@ -102,6 +117,17 @@
 	<div class="all-center">
 		<div class="final">
 			<slot />
+			<footer>
+				<a href={links.github}><i class="fab fa-github fa-5x" /></a>
+				<a class="home" href="/">Home</a>
+				<a href={links.linkedin}><i class="fab fa-linkedin fa-5x" /></a>
+			</footer>
 		</div>
 	</div>
 </div>
+
+<style>
+	.home {
+		font-size: 2.5em;
+	}
+</style>

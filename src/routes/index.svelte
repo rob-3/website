@@ -29,24 +29,8 @@
 		</section>
 	</div>
 </main>
-<footer>
-	<a href={links.github}><i class="fab fa-github fa-5x"></i></a>
-	<a href={links.linkedin}><i class="fab fa-linkedin fa-5x"></i></a>
-</footer>
 
 <style>
-	footer {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		width: 100%;
-		padding: 2em;
-		box-sizing: border-box;
-	}
-	footer > * {
-		padding: 0 50px;
-		color: black;
-	}
 	.projects {
 		flex-basis: 55em;
 		max-width: min(70em, 100%);
