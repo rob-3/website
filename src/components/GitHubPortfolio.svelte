@@ -46,8 +46,7 @@
 		font-size: 1rem;
 	}
 	.description {
-		width: min(40em, 100%);
-		height: 15em;
+		width: min(25em, 100%);
 		background-color: white;
 		border: 1px solid #e1e4e8;
 		box-sizing: border-box;
