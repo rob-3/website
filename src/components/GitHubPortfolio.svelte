@@ -38,6 +38,7 @@
 		margin: 1.5em;
 		font-size: 0.875em;
 		cursor: pointer;
+		height: 9.043em;
 	}
 	.cards {
 		display: flex;
