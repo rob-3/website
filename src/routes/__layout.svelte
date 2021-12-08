@@ -81,6 +81,14 @@
 			font-size: 2em;
 			margin-top: 1em;
 		}
+		.final {
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+		footer {
+			margin-top: auto;
+		}
 		@media screen and (min-width: 640px) {
 			h1 {
 				font-size: 4em;
@@ -92,9 +100,8 @@
 <div class="bg" />
 <div class="all">
 	<div class="all-center">
-		<div>
-
-		<slot />
+		<div class="final">
+			<slot />
 		</div>
 	</div>
 </div>
