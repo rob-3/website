@@ -16,4 +16,9 @@
 		margin: 2em;
 		width: min(560px, 100%);
 	}
+	@media screen and (max-width: 639px) {
+		iframe {
+			margin: 1em 0em;
+		}
+	}
 </style>

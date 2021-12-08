@@ -39,7 +39,8 @@
 		h2 {
 			font-weight: 300;
 			font-size: 2em;
-			margin-top: 1em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
 		}
 		#svelte {
 			height: 100%;
