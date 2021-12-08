@@ -60,6 +60,7 @@
 		color: white;
 		background-color: rgba(0, 0, 0, 1.0);
 		transition: all .15s ease-in-out;
+		margin: 1em;
 	}
 	.talk-link:hover {
 		color: black;
