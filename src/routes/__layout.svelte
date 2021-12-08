@@ -66,7 +66,7 @@
 			<slot />
 			<footer>
 				<a href={links.github}><i class="fab fa-github fa-5x" /></a>
-				<a class="home" href="/">Home</a>
+				<a href="/"><i class="fas fa-home fa-5x"></i></a>
 				<a href={links.linkedin}><i class="fab fa-linkedin fa-5x" /></a>
 			</footer>
 		</div>
@@ -74,9 +74,6 @@
 </div>
 
 <style>
-	.home {
-		font-size: 2.5em;
-	}
 	/* this is all a massive hack to get around background-attachment: fixed
 		 * not working well on mobile*/
 	.bg {
