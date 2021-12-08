@@ -14,7 +14,7 @@
 </header>
 <main>
 	<p>
-		a curious student and software developer at the University of Central Florida passionate about
+		A curious student and software developer at the University of Central Florida passionate about
 		programming languages and the web
 	</p>
 	<div class="flex-horizontal">
