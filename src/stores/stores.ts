@@ -14,6 +14,8 @@ type GitHubRepositoryData = {
 	description: string;
 	language: string;
 	stargazers_count: number;
+	name: string;
+	full_name: string;
 }
 
 // api cache
