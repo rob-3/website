@@ -130,5 +130,9 @@
 	}
 	footer > * {
 		color: black;
+		transition: all .15s ease-in-out;
+	}
+	footer > *:hover {
+		color: rgba(0, 0, 0, 0.6);
 	}
 </style>
