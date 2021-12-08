@@ -25,7 +25,7 @@
 		<section class="center talks">
 			<h2><a sveltekit:prefetch href="/talks">My Talks</a></h2>
 			<YouTubeVideo src={talks[0]} />
-			<a sveltekit:prefetch href="/talks">All Talks</a>
+			<a class="talk-link" sveltekit:prefetch href="/talks">All Talks<i style="margin-left: 0.5em" class="fas fa-angle-double-right"></i></a>
 		</section>
 	</div>
 </main>
@@ -49,5 +49,19 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+	.talk-link {
+		display: block;
+		border: black 1px solid;
+		padding: 0.8em 1em;
+		border-radius: 0.5rem;
+		text-decoration: none;
+		color: white;
+		background-color: rgba(0, 0, 0, 1.0);
+		transition: all .15s ease-in-out;
+	}
+	.talk-link:hover {
+		color: black;
+		background-color: rgba(0, 0, 0, 0)
 	}
 </style>
