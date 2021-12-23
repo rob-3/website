@@ -3,7 +3,7 @@
 	import { fade } from 'svelte/transition';
 	export let repo: string;
 	if ($githubRequests[repo] === undefined) {
-		$githubRequests[repo] = fetch(`/github-api/${repo}`)
+		$githubRequests[repo] = fetch(`/api/github-api/${repo}`)
 		.then((rsp) => rsp.json())
 		.then((data) => (data.name ? data : Promise.reject('Request failed!')))
 	}
