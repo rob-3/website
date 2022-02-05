@@ -1,0 +1,3 @@
+[submodule "static/dontasktoask.com"]
+	path = static/dontasktoask.com
+	url = https://github.com/rob-3/dontasktoask.com
