@@ -1,62 +1,10 @@
 <script lang="ts">
+	import "../app.css";
 	import links from './_links';
 </script>
 
 <svelte:head>
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
-		* {
-			margin: 0;
-			padding: 0;
-			font-family: Roboto;
-		}
-		h1 {
-			font-weight: 100;
-			font-size: 3em;
-			padding: 0.25em;
-			display: inline-block;
-		}
-		header {
-			white-space: nowrap;
-			margin: 0.25em;
-			text-align: center;
-		}
-		p {
-			padding: 0.5em;
-			margin: 0 1em;
-			text-align: center;
-		}
-		h1 a,
-		h1 a:visited,
-		h2 a,
-		h2 a:visited {
-			color: inherit;
-			text-decoration: none;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-		h2 {
-			font-weight: 300;
-			font-size: 2em;
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-		}
-		#svelte {
-			height: 100%;
-		}
-		html {
-			overscroll-behavior: none;
-			height: 100%;
-		}
-		body {
-			height: 100%;
-		}
-		@media screen and (min-width: 640px) {
-			h1 {
-				font-size: 4em;
-			}
-		}
 	</style>
 </svelte:head>
 
