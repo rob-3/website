@@ -24,7 +24,9 @@
 		</section>
 		<section class="center talks">
 			<h2><a sveltekit:prefetch href="/talks">My Talks</a></h2>
-			<YouTubeVideo src={talks[0]} />
+			<div class="flex justify-center w-full p-8">
+				<YouTubeVideo src={talks[0]} />
+			</div>
 			<a class="talk-link" sveltekit:prefetch href="/talks">All Talks<i style="margin-left: 0.5em" class="fas fa-angle-double-right"></i></a>
 		</section>
 	</div>
