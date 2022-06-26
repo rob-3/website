@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { githubColors, githubRequests } from '../stores/stores';
+	import { githubColors, githubRequests, type GitHubRepositoryData } from '../stores/stores';
 	import { fade } from 'svelte/transition';
 	export let repo: string;
-	if ($githubRequests[repo] === undefined) {
-		$githubRequests[repo] = fetch(`/api/github-api/${repo}`)
-		.then((rsp) => rsp.json())
-		.then((data) => (data.name ? data : Promise.reject('Request failed!')))
-	}
+	githubRequests.getRepo(repo);
+	$: ({ loading, err, data } = $githubRequests[repo]);
+	$: ({ fork, forks, html_url, name, source, description, language, stargazers_count } =
+		data ?? ({} as GitHubRepositoryData));
 </script>
 
-{#await $githubRequests[repo]}
+{#if loading}
 	<div class="card hidden" />
-{:then { fork, forks, html_url, name, source, description, language, stargazers_count }}
+{:else if err}
+	<div class="card">{err}</div>
+{:else}
 	<div on:click in:fade class="card">
 		<div class="center">
 			<svg
@@ -92,9 +93,7 @@
 			{/if}
 		</div>
 	</div>
-{:catch err}
-	<div in:fade class="card">{err}</div>
-{/await}
+{/if}
 
 <style>
 	.card {

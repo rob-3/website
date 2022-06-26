@@ -11,7 +11,7 @@
 	let triggered = false;
 	function onClick(repoSlug: string) {
 		if (!triggered) {
-			myRepos = [repos.find((r) => r.repo === repoSlug)];
+			myRepos = [repos.find((r) => r.repo === repoSlug)!];
 		} else {
 			myRepos = repos;
 		}
