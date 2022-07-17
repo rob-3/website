@@ -1,4 +1,5 @@
 export default [
+	'https://www.youtube-nocookie.com/embed/hg1SvZ42Mes',
 	'https://www.youtube-nocookie.com/embed/cPLErKHGtpQ',
 	'https://www.youtube-nocookie.com/embed/GBRm-D-AMxA',
 	'https://www.youtube-nocookie.com/embed/6Bqf_FLqYb8',
