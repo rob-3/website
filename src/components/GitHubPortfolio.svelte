@@ -8,22 +8,13 @@
 	};
 	export let repos: Repo[] = [];
 	let myRepos = repos;
-	let triggered = false;
-	function onClick(repoSlug: string) {
-		if (!triggered) {
-			myRepos = [repos.find((r) => r.repo === repoSlug)!];
-		} else {
-			myRepos = repos;
-		}
-		triggered = !triggered;
-	}
 </script>
 
 <main>
 	<div class="cards">
 		{#each myRepos.map((r) => r.repo) as repo (repo)}
 			<div animate:flip={{ duration: 500 }} class="card">
-				<RepoCard on:click={() => onClick(repo)} {repo} />
+				<RepoCard {repo} />
 			</div>
 		{/each}
 	</div>
@@ -37,7 +28,6 @@
 		width: 20em;
 		margin: 1.5em;
 		font-size: 0.875em;
-		cursor: pointer;
 		height: 9.043em;
 	}
 	.cards {
