@@ -24,7 +24,7 @@
 		</section>
 		<section class="center talks">
 			<h2><a sveltekit:prefetch href="/talks">My Talks</a></h2>
-			<div class="flex justify-center w-full p-8">
+			<div class="flex justify-center w-full">
 				<YouTubeVideo src={talks[0]} />
 			</div>
 			<a class="talk-link" sveltekit:prefetch href="/talks">All Talks<i style="margin-left: 0.5em" class="fas fa-angle-double-right"></i></a>
@@ -46,7 +46,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 	.center {
 		display: flex;
