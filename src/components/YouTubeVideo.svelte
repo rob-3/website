@@ -3,7 +3,6 @@
 </script>
 
 <iframe
-	height="315"
 	{src}
 	title="YouTube video player"
 	frameborder="0"
@@ -15,6 +14,7 @@
 	iframe {
 		margin: 2em;
 		width: min(560px, 100%);
+		aspect-ratio: 16 / 9;
 	}
 	@media screen and (max-width: 639px) {
 		iframe {
