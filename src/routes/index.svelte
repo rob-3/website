@@ -10,7 +10,7 @@
 	<script src="https://kit.fontawesome.com/b6461ef53d.js" crossorigin="anonymous"></script>
 </svelte:head>
 <header>
-	<h1>Robert Boyd</h1>
+	<h1 class="font-medium">Robert Boyd</h1>
 </header>
 <main>
 	<p>
@@ -19,11 +19,11 @@
 	</p>
 	<div class="flex-horizontal">
 		<section class="center projects">
-			<h2><a href={links.github}>My Projects</a></h2>
+			<h2 class="font-normal"><a href={links.github}>My Projects</a></h2>
 			<GitHubPortfolio {repos} />
 		</section>
 		<section class="center talks">
-			<h2><a sveltekit:prefetch href="/talks">My Talks</a></h2>
+			<h2 class="font-normal"><a sveltekit:prefetch href="/talks">My Talks</a></h2>
 			<div class="flex justify-center w-full">
 				<YouTubeVideo src={talks[0]} />
 			</div>
