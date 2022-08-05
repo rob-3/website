@@ -12,60 +12,29 @@
 <header>
 	<h1 class="font-medium">Robert Boyd</h1>
 </header>
-<main>
+<main class="max-w-max m-auto">
 	<p>
 		A curious student and software developer at the University of Central Florida passionate about
 		programming languages and the web
 	</p>
-	<div class="flex-horizontal">
-		<section class="center projects">
+	<div class="flex flex-wrap justify-center mt-4">
+		<section class="flex flex-col items-center max-w-[min(70em,100%)] flex-grow basis-[55em]">
 			<h2 class="font-normal"><a href={links.github}>My Projects</a></h2>
 			<GitHubPortfolio {repos} />
 		</section>
-		<section class="center talks">
+		<section class="flex flex-col items-center flex-grow basis-[650px]">
 			<h2 class="font-normal"><a sveltekit:prefetch href="/talks">My Talks</a></h2>
 			<div class="flex justify-center w-full">
 				<YouTubeVideo src={talks[0]} />
 			</div>
-			<a class="talk-link" sveltekit:prefetch href="/talks">All Talks<i style="margin-left: 0.5em" class="fas fa-angle-double-right"></i></a>
+			<a class="
+				block text-white border border-solid border-black px-4
+				py-3 talk-link m-4 rounded-lg no-underline bg-black
+				hover:bg-[rgba(0,0,0,0)] hover:text-black transition-all
+				" 
+				sveltekit:prefetch
+				href="/talks"
+			>All Talks<i class="ml-2 fas fa-angle-double-right"></i></a>
 		</section>
 	</div>
 </main>
-
-<style>
-	.projects {
-		flex-basis: 55em;
-		max-width: min(70em, 100%);
-		flex-grow: 1;
-	}
-	.talks {
-		flex-basis: 650px;
-		flex-grow: 1;
-	}
-	.flex-horizontal {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin-top: 1em;
-	}
-	.center {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.talk-link {
-		display: block;
-		border: black 1px solid;
-		padding: 0.8em 1em;
-		border-radius: 0.5rem;
-		text-decoration: none;
-		color: white;
-		background-color: rgba(0, 0, 0, 1.0);
-		transition: all .15s ease-in-out;
-		margin: 1em;
-	}
-	.talk-link:hover {
-		color: black;
-		background-color: rgba(0, 0, 0, 0)
-	}
-</style>
