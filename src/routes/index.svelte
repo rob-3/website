@@ -36,7 +36,7 @@
 		</section>
 		<section class="flex flex-col items-center flex-grow basis-[650px] mt-2 sm:mt-6 mb-6">
 			<h2 class="m-2 sm:m-4"><a class="hover:underline" sveltekit:prefetch href="/talks">My Talks</a></h2>
-			<div class="flex justify-center w-full m-2 sm:m-4">
+			<div class="flex justify-center w-full p-4 sm:mb-4">
 				<YouTubeVideo src={talks[0]} />
 			</div>
 			<a
