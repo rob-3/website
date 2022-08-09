@@ -9,7 +9,9 @@
 <svelte:head>
 	<script src="https://kit.fontawesome.com/b6461ef53d.js" crossorigin="anonymous"></script>
 </svelte:head>
-<header>
+<header class="flex items-center w-fit m-auto my-4">
+	<img src="/robert-boyd.jpeg" alt="Robert Boyd"
+		class="inline-block rounded-full w-24 h-24 sm:w-28 sm:h-28">
 	<h1>Robert Boyd</h1>
 </header>
 <main class="max-w-max m-auto">
