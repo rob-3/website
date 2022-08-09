@@ -10,23 +10,20 @@
 	let myRepos = repos;
 </script>
 
-<main>
-	<div class="cards">
-		{#each myRepos.map((r) => r.repo) as repo (repo)}
-			<div animate:flip={{ duration: 500 }} class="card">
-				<RepoCard {repo} />
-			</div>
-		{/each}
-	</div>
-	{#if myRepos.length === 1}
-		<div in:fade class="description">{@html myRepos[0].description}</div>
-	{/if}
-</main>
+<div class="cards">
+	{#each myRepos.map((r) => r.repo) as repo (repo)}
+		<div animate:flip={{ duration: 500 }} class="card">
+			<RepoCard {repo} />
+		</div>
+	{/each}
+</div>
+{#if myRepos.length === 1}
+	<div in:fade class="description">{@html myRepos[0].description}</div>
+{/if}
 
 <style>
 	.card {
 		width: 20em;
-		margin: 1.5em;
 		font-size: 0.875em;
 		height: 9.043em;
 	}
@@ -34,7 +31,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin: 1.5em;
+		gap: 20px;
 		font-size: 1rem;
 	}
 	.description {

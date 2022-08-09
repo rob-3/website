@@ -12,13 +12,7 @@
 
 <style>
 	iframe {
-		margin: 2em;
 		width: min(560px, 100%);
 		aspect-ratio: 16 / 9;
-	}
-	@media screen and (max-width: 639px) {
-		iframe {
-			margin: 1em;
-		}
 	}
 </style>

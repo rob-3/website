@@ -18,18 +18,25 @@
 	<h1>Robert Boyd</h1>
 </header>
 <main class="max-w-max m-auto">
-	<p>
+	<p class="m-2">
 		A curious student and software developer at the University of Central Florida passionate about
 		programming languages and the web
 	</p>
-	<div class="flex flex-wrap justify-center mt-4">
-		<section class="flex flex-col items-center max-w-[min(70em,100%)] flex-grow basis-[55em]">
-			<h2><a class="hover:underline" href={links.github}>My Projects</a></h2>
-			<GitHubPortfolio {repos} />
+	<div class="flex flex-wrap justify-center sm:mt-4">
+		<section
+			class="
+			flex flex-col items-center max-w-[min(70em,100%)]
+			flex-grow basis-[55em] mt-2 sm:mt-6 mb-6
+			"
+		>
+			<h2 class="m-2 sm:m-4"><a class="hover:underline" href={links.github}>My Projects</a></h2>
+			<div class="m-2 sm:m-4">
+				<GitHubPortfolio {repos} />
+			</div>
 		</section>
-		<section class="flex flex-col items-center flex-grow basis-[650px]">
-			<h2><a class="hover:underline" sveltekit:prefetch href="/talks">My Talks</a></h2>
-			<div class="flex justify-center w-full">
+		<section class="flex flex-col items-center flex-grow basis-[650px] mt-2 sm:mt-6 mb-6">
+			<h2 class="m-2 sm:m-4"><a class="hover:underline" sveltekit:prefetch href="/talks">My Talks</a></h2>
+			<div class="flex justify-center w-full m-2 sm:m-4">
 				<YouTubeVideo src={talks[0]} />
 			</div>
 			<a
