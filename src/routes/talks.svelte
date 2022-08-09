@@ -6,14 +6,14 @@
 <header>
 	<h1>My Talks</h1>
 </header>
-<main>
+<div class="gap-8 m-8">
 	{#each talkLinks as link}
 		<YouTubeVideo src={link} />
 	{/each}
-</main>
+</div>
 
 <style>
-	main {
+	div {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;

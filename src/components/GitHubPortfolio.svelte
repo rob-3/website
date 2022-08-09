@@ -43,9 +43,4 @@
 		border-radius: 0.375em;
 		padding: 1.2em;
 	}
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
 </style>
