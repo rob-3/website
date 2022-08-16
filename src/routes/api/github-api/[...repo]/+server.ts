@@ -1,3 +1,5 @@
+import { json as json$1 } from '@sveltejs/kit';
+
 export async function GET({ params: { repo } }: { params: { repo: string } }) {
 	const data = await fetch(`https://api.github.com/repos/${repo}`, {
 		headers: {
@@ -5,7 +7,5 @@ export async function GET({ params: { repo } }: { params: { repo: string } }) {
 			'user-agent': 'node.js'
 		}
 	}).then((rsp) => rsp.json());
-	return {
-		body: data
-	};
+	return json$1(data);
 }

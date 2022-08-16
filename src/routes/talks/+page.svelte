@@ -1,6 +1,6 @@
 <script>
-	import YouTubeVideo from '../components/YouTubeVideo.svelte';
-	import talkLinks from './_talks';
+	import YouTubeVideo from '../../components/YouTubeVideo.svelte';
+	import talkLinks from '../_talks';
 </script>
 
 <header>
