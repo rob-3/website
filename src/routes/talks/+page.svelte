@@ -1,6 +1,7 @@
 <script>
 	import YouTubeVideo from '../../components/YouTubeVideo.svelte';
 	import talkLinks from '../_talks';
+	export const prerender = true;
 </script>
 
 <header>

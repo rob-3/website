@@ -4,6 +4,7 @@
 	import talks from './_talks';
 	import repos from './_repos';
 	import links from './_links';
+	export const prerender = true;
 </script>
 
 <svelte:head>
