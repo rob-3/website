@@ -4,6 +4,8 @@
 	import talks from './_talks';
 	import repos from './_repos';
 	import links from './_links';
+	// @ts-expect-error
+	import robertBoydImg from '../robert-boyd.jpeg?w=192&h=192&webp';
 	export const prerender = true;
 </script>
 
@@ -12,7 +14,7 @@
 </svelte:head>
 <header class="flex flex-wrap justify-center items-center w-fit m-auto my-4">
 	<img
-		src="/robert-boyd.jpeg"
+		src={robertBoydImg}
 		alt="Robert Boyd"
 		class="inline-block rounded-full w-24 h-24 sm:w-28 sm:h-28"
 	/>
