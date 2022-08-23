@@ -4,6 +4,9 @@
 	export const prerender = true;
 </script>
 
+<svelte:head>
+	<title>My Talks</title>
+</svelte:head>
 <header>
 	<h1>My Talks</h1>
 </header>
