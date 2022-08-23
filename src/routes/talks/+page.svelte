@@ -6,6 +6,7 @@
 
 <svelte:head>
 	<title>My Talks</title>
+	<meta name="description" content="A collection of Robert Boyd's various technical talks">
 </svelte:head>
 <header>
 	<h1>My Talks</h1>
