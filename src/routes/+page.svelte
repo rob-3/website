@@ -7,10 +7,13 @@
 	// @ts-expect-error
 	import robertBoydImg from '../robert-boyd.jpeg?w=192&h=192&webp';
 	export const prerender = true;
+	const description =
+		'A curious student and software developer at the University of Central Florida passionate about programming languages and the web';
 </script>
 
 <svelte:head>
 	<title>Robert Boyd</title>
+	<meta name="description" content={description}>
 	<script src="https://kit.fontawesome.com/b6461ef53d.js" crossorigin="anonymous"></script>
 </svelte:head>
 <header class="flex flex-wrap justify-center items-center w-fit m-auto my-4">
@@ -22,10 +25,7 @@
 	<h1>Robert Boyd</h1>
 </header>
 <main class="max-w-max m-auto">
-	<p class="m-2">
-		A curious student and software developer at the University of Central Florida passionate about
-		programming languages and the web
-	</p>
+	<p class="m-2">{description}</p>
 	<div class="flex flex-wrap justify-center sm:mt-4">
 		<section
 			class="
@@ -39,7 +39,9 @@
 			</div>
 		</section>
 		<section class="flex flex-col items-center flex-grow basis-[650px] mt-2 sm:mt-6 mb-6">
-			<h2 class="m-2 sm:m-4"><a class="hover:underline" sveltekit:prefetch href="/talks">My Talks</a></h2>
+			<h2 class="m-2 sm:m-4">
+				<a class="hover:underline" sveltekit:prefetch href="/talks">My Talks</a>
+			</h2>
 			<div class="flex justify-center w-full p-4 sm:mb-4">
 				<YouTubeVideo src={talks[0]} />
 			</div>
