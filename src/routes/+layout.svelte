@@ -6,23 +6,29 @@
 <div>
 	<slot />
 	<footer class="text-black flex justify-around sm:justify-center sm:gap-10 py-6">
-		<a class="hover:opacity-60" href={links.github}>
+		<a class="hover:opacity-60 no-underline" href={links.github}>
 			<div class="flex flex-col items-center">
-				<i class="fab fa-github fa-5x no-underline" />
+				<i class="fab fa-github fa-5x" />
 				<span>GitHub</span>
 			</div>
 		</a>
-		<a class="hover:opacity-60" href="/">
+		<a class="hover:opacity-60 no-underline" href="/">
 			<div class="flex flex-col items-center">
-				<i class="fas fa-home fa-5x no-underline" />
+				<i class="fas fa-home fa-5x" />
 				<span>Home</span>
 			</div>
 		</a>
-		<a class="hover:opacity-60" href={links.linkedin}>
+		<a class="hover:opacity-60 no-underline" href={links.linkedin}>
 			<div class="flex flex-col items-center">
-				<i class="fab fa-linkedin fa-5x no-underline" />
+				<i class="fab fa-linkedin fa-5x" />
 				<span>LinkedIn</span>
 			</div>
 		</a>
 	</footer>
 </div>
+
+<style>
+	a:hover > div > span {
+		text-decoration: underline;
+	}
+</style>
