@@ -1,5 +1,5 @@
+import { browser } from '$app/environment';
 import { type Readable, writable } from 'svelte/store';
-import { browser } from '$app/env';
 
 export const githubColors = writable(
 	fetch('https://raw.githubusercontent.com/ozh/github-colors/master/colors.json').then((blob) =>
