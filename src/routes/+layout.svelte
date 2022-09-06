@@ -3,8 +3,9 @@
 	import links from './_links';
 </script>
 
-<div>
+<div class="flex flex-col min-h-screen">
 	<slot />
+	<div class="flex-grow"></div>
 	<footer class="text-black flex justify-around sm:justify-center sm:gap-10 py-6">
 		<a class="hover:opacity-60 no-underline" href={links.github}>
 			<div class="flex flex-col items-center">

@@ -7,6 +7,9 @@
 	* {
 		@apply font-sans;
 	}
+	html {
+		scrollbar-gutter: stable;
+	}
 	h1 {
 		font-weight: 100;
 		font-size: 3.5em;
