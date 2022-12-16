@@ -4,7 +4,7 @@
 	import talks from './_talks';
 	import repos from './_repos';
 	import links from './_links';
-	// @ts-expect-error
+	// @ts-expect-error this is a special image import
 	import robertBoydImg from '../robert-boyd.jpeg?w=192&h=192&webp';
 	export const prerender = true;
 	const description =
