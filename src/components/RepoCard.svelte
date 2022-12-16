@@ -13,7 +13,7 @@
 {:else if err}
 	<div class="card">{err}</div>
 {:else}
-	<div on:click in:fade class="card">
+	<div in:fade class="card">
 		<div class="center">
 			<svg
 				style="fill: #586069; margin-right: 8px;"
@@ -28,7 +28,7 @@
 				/></svg
 			>
 			<span style="font-weight: 600; color: #0366d6;">
-				<a on:click|stopPropagation={() => {}} style="color: inherit;" href={html_url}>{name}</a>
+				<a style="color: inherit;" href={html_url}>{name}</a>
 			</span>
 		</div>
 		{#if fork}
