@@ -40,7 +40,7 @@
 		</section>
 		<section class="flex flex-col items-center flex-grow basis-[650px] mt-2 sm:mt-6 mb-6">
 			<h2 class="m-2 sm:m-4">
-				<a class="hover:underline" sveltekit:prefetch href="/talks">My Talks</a>
+				<a class="hover:underline" href="/talks">My Talks</a>
 			</h2>
 			<div class="flex justify-center w-full p-4 sm:mb-4">
 				<YouTubeVideo src={talks[0]} />
@@ -51,7 +51,6 @@
 				py-3 talk-link m-4 rounded-lg no-underline bg-black
 				hover:bg-[rgba(0,0,0,0)] hover:text-black transition-all
 				"
-				sveltekit:prefetch
 				href="/talks">All Talks<i class="ml-2 fas fa-angle-double-right" /></a
 			>
 		</section>
