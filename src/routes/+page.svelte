@@ -13,7 +13,7 @@
 
 <svelte:head>
 	<title>Robert Boyd</title>
-	<meta name="description" content={description}>
+	<meta name="description" content={description} />
 	<script src="https://kit.fontawesome.com/b6461ef53d.js" crossorigin="anonymous"></script>
 </svelte:head>
 <header class="flex flex-wrap justify-center items-center w-fit m-auto my-4">
@@ -47,12 +47,21 @@
 			</div>
 			<a
 				class="
-				block text-white border border-solid border-black px-4
+				flex items-center
+				text-white border border-solid border-black px-4
 				py-3 talk-link m-4 rounded-lg no-underline bg-black
 				hover:bg-[rgba(0,0,0,0)] hover:text-black transition-all
 				"
-				href="/talks">All Talks<i class="ml-2 fas fa-angle-double-right" /></a
-			>
+				href="/talks"
+				>All Talks
+				<svg
+					class="ml-1 h-4 fill-current"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 512 512"
+					><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path
+						d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+				/>
+			</a>
 		</section>
 	</div>
 </main>
