@@ -14,7 +14,6 @@
 <svelte:head>
 	<title>Robert Boyd</title>
 	<meta name="description" content={description} />
-	<script src="https://kit.fontawesome.com/b6461ef53d.js" crossorigin="anonymous"></script>
 </svelte:head>
 <header class="flex flex-wrap justify-center items-center w-fit m-auto my-4">
 	<img
