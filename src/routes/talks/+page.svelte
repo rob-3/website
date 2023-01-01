@@ -1,6 +1,6 @@
 <script>
 	import YouTubeVideo from '../../components/YouTubeVideo.svelte';
-	import talkLinks from '../_talks';
+	import talks from '../_talks';
 	export const prerender = true;
 </script>
 
@@ -12,8 +12,8 @@
 	<h1>My Talks</h1>
 </header>
 <div class="gap-8 m-8">
-	{#each talkLinks as link}
-		<YouTubeVideo src={link} />
+	{#each talks as talkId}
+		<YouTubeVideo id={talkId} />
 	{/each}
 </div>
 

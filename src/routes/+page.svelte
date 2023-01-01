@@ -42,7 +42,7 @@
 				<a class="hover:underline" href="/talks">My Talks</a>
 			</h2>
 			<div class="flex justify-center w-full p-4 sm:mb-4">
-				<YouTubeVideo src={talks[0]} />
+				<YouTubeVideo id={talks[0]} />
 			</div>
 			<a
 				class="
