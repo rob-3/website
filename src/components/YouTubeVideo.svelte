@@ -14,7 +14,7 @@
 {:else}
 	<div
 		class="w-[min(560px,100%)] aspect-video bg-cover bg-center group hover:cursor-pointer"
-		style={`background-image: url("http://img.youtube.com/vi/${id}/0.jpg");`}
+		style={`background-image: url("https://img.youtube.com/vi/${id}/0.jpg");`}
 		on:click={() => (shouldLoad = true)}
 	>
 		<div class="bg-gray-900/20 h-full grid place-items-center">
