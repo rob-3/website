@@ -113,9 +113,6 @@
 	.description {
 		flex-grow: 1;
 	}
-	.hidden {
-		visibility: hidden;
-	}
 	a {
 		text-decoration: none;
 	}
