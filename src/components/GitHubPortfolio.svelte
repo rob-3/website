@@ -2,8 +2,9 @@
 	import RepoCard from '../components/RepoCard.svelte';
 	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';
+	import type { GitHubRepositoryData } from '../types/GitHubRespositoryData';
 	type Repo = {
-		repo: string;
+		repo: GitHubRepositoryData;
 		description: string;
 	};
 	export let repos: Repo[] = [];
@@ -11,7 +12,7 @@
 </script>
 
 <div class="cards">
-	{#each myRepos.map((r) => r.repo) as repo (repo)}
+	{#each myRepos as repo (repo.description)}
 		<div animate:flip={{ duration: 500 }} class="card">
 			<RepoCard {repo} />
 		</div>

@@ -2,12 +2,13 @@
 	import GitHubPortfolio from '../components/GitHubPortfolio.svelte';
 	import YouTubeVideo from '../components/YouTubeVideo.svelte';
 	import talks from './_talks';
-	import repos from './_repos';
 	import links from './_links';
 	// @ts-expect-error this is a special image import
 	import robertBoydImg from '../robert-boyd.jpeg?w=192&h=192&webp';
+	import type { PageData } from './$types';
 	const description =
 		'A curious student and software developer at the University of Central Florida passionate about programming languages and the web';
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -33,7 +34,7 @@
 		>
 			<h2 class="m-2 sm:m-4"><a class="hover:underline" href={links.github}>My Projects</a></h2>
 			<div class="m-2 sm:m-4">
-				<GitHubPortfolio {repos} />
+				<GitHubPortfolio repos={data.data} />
 			</div>
 		</section>
 		<section class="flex flex-col items-center flex-grow basis-[650px] mt-2 sm:mt-6 mb-6">
