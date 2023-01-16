@@ -3,11 +3,7 @@
 	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';
 	import type { GitHubRepositoryData } from '../types/GitHubRespositoryData';
-	type Repo = {
-		repo: GitHubRepositoryData;
-		description: string;
-	};
-	export let repos: Repo[] = [];
+	export let repos: GitHubRepositoryData[] = [];
 	let myRepos = repos;
 </script>
 

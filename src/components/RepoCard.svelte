@@ -2,12 +2,8 @@
 	import type { GitHubRepositoryData } from '../types/GitHubRespositoryData';
 	import { fade } from 'svelte/transition';
 	import colors from '../routes/_colors';
-	type Repo = {
-		repo: GitHubRepositoryData;
-		description: string;
-	};
-	export let repo: Repo;
-	$: ({ fork, forks, html_url, name, source, description, language, stargazers_count } = repo.repo);
+	export let repo: GitHubRepositoryData;
+	$: ({ fork, forks, html_url, name, source, description, language, stargazers_count } = repo);
 </script>
 
 <div in:fade class="card">
