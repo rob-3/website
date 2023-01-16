@@ -6,7 +6,6 @@
 	import links from './_links';
 	// @ts-expect-error this is a special image import
 	import robertBoydImg from '../robert-boyd.jpeg?w=192&h=192&webp';
-	export const prerender = true;
 	const description =
 		'A curious student and software developer at the University of Central Florida passionate about programming languages and the web';
 </script>

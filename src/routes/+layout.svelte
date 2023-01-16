@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import links from './_links';
+	export const prerender = true;
 </script>
 
 <div class="flex flex-col min-h-screen">
